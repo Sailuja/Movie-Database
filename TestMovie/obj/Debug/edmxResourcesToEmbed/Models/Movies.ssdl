@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MoviesDBModel1.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="movies">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="256" />
+    <Property Name="Genre" Type="varchar" MaxLength="50" />
+    <Property Name="Rating" Type="decimal" Precision="10" Scale="1" />
+    <Property Name="Actor" Type="varchar" MaxLength="256" />
+    <Property Name="Director" Type="varchar" MaxLength="256" />
+  </EntityType>
+  <EntityContainer Name="MoviesDBModel1StoreContainer">
+    <EntitySet Name="movies" EntityType="Self.movies" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
